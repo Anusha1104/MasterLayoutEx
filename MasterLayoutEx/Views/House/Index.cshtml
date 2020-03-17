@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MasterLayoutEx.Models.EMPDATA>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterLayoutPage.cshtml";
+}
+
+
+
+<h2>List of Employee</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered"> 
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.EMPNO)</th>
+            <th>@Html.DisplayNameFor(m => m.ENAME)</th>
+            <th>@Html.DisplayNameFor(m => m.JOB)</th>
+            <th>@Html.DisplayNameFor(m => m.MGR)</th>
+            <th>@Html.DisplayNameFor(m => m.HIREDATE)</th>
+            <th>@Html.DisplayNameFor(m => m.SAL)</th>
+            <th>@Html.DisplayNameFor(m => m.COMM)</th>
+            <th>@Html.DisplayNameFor(m => m.DEPTNO)</th>
+            
+        </tr>
+    </thead>
+    @foreach (var employee in Model)
+    {
+        <tr>
+            <td>@employee.EMPNO</td>
+            <td>@employee.ENAME</td>
+            <td>@employee.JOB</td>
+            <td>@employee.MGR</td>
+            <td>@employee.HIREDATE</td>
+            <td>@employee.SAL</td>
+            <td>@employee.COMM</td>
+            <td>@employee.DEPTNO</td>
+        </tr>
+
+    }
+</table>

@@ -1,0 +1,76 @@
+﻿@model MasterLayoutEx.Models.EMPDATA
+@{
+    ViewBag.Title = "Create";
+}
+
+<h3>Create New</h3>
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.EMPNO)
+                @Html.TextBoxFor(m => m.EMPNO, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.ENAME)
+                @Html.TextBoxFor(m => m.ENAME, new { @class = "form-control" })
+
+            </div>
+        </div>
+   
+    
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.JOB)
+                @Html.TextBoxFor(m => m.JOB, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.MGR)
+                @Html.TextBoxFor(m => m.MGR, new { @class = "form-control" })
+
+            </div>
+        </div>
+   
+   
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.HIREDATE)
+                @Html.TextBoxFor(m => m.HIREDATE, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.SAL)
+                @Html.TextBoxFor(m => m.SAL, new { @class = "form-control" })
+
+            </div>
+        </div>
+ 
+    
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.COMM)
+                @Html.TextBoxFor(m => m.COMM, new { @class = "form-control" })
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                @Html.LabelFor(m => m.DEPTNO)
+                @Html.TextBoxFor(m => m.DEPTNO, new { @class = "form-control" })
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+}  
